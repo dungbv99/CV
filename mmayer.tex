@@ -1,0 +1,281 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.6.5, 3 Nov 2022) written by LianTze Lim (liantze@gmail.com), based on the
+% CV created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 package.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+\usepackage{xcolor}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+% \colorlet{name}{black}
+% \colorlet{tagline}{PastelRed}
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+\newcommand{\MYhref}[3][blue]{\href{#2}{\color{#1}{#3}}}%
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+% \input{pubs-authoryear}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+\input{pubs-num}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{BUI VIET DUNG}
+% \tagline{Business Woman \& Proud Geek}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%% You can add multiple photos on the left or right
+\photoR{2.5cm}{profile}
+% \photoL{2cm}{Yacht_High,Suitcase_High}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{dungbvhust@gmail.com}
+  \phone{(+84) 967539285}
+  \location{Cau Giay, Ha Noi}
+  \linkedin{https://www.linkedin.com/in/dung-bui-viet-0b5112188}
+  \github{https://github.com/dungbv99} % I'm just making this up though.
+%   \orcid{0000-0000-0000-0000} % Obviously making this up too.
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+	%%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+  % \NewInfoField*{mastodon}{\faMastodon}
+  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+  %% the full hyperlink.
+  % \mastodon{@username@instance}{https://instance.url/@username}
+}
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Experience}
+
+\cvevent{Software Engineer}{\MYhref{https://www.tcbs.com.vn}{Techcom Securities}}{Oct 2021 -- now}{Ha Noi, Viet Nam}
+
+\large\MYhref{https://www.tcbs.com.vn/isave}{\textbf{ISave Project}}
+
+\begin{itemize}
+\item \normalsize\textbf{Objectives:} {Savings deposit system that allows customers to purchase stocks and earn daily interest and company uses the cash for its business}
+\item \normalsize Develop back-end service for administrators to manage customers' balances and transactions
+\item \normalsize Develop withdrawal limit management feature to ensure the system's liquidity
+\item \normalsize Integrate iSave with the stock system for purchasing stocks using saving cash
+\item \normalsize Customize iSave by using a multi-tenant database architecture to develop another savings system with unique features
+\end{itemize}
+\vspace{0.3cm}
+
+\large\textbf{Margin X Project}
+\begin{itemize}
+\item \normalsize \textbf{Objectives:} {A system for managing margin loan balances for securities trading}
+\item \normalsize Develop back-end service for administrators to manage the lending margin policy and customers' loans
+\item \normalsize Develop a system for managing the export of reports: Solve the issue of retrieving extremely large data and generating reports with limited memory
+\item \normalsize Research on the architecture of PostgreSQL replication
+\end{itemize}
+
+\vspace{0.3cm}
+\large\textbf{Technology used in above projects}
+\begin{itemize}
+\item \normalsize \textbf{Programing language:} {Java}  \quad \textbf{Framework:} {Spring Boot} 
+\item \normalsize \textbf{Database:} {Oracle, Postgres, Redis}
+\item \normalsize \textbf{Monitoring:} {Grafana, Prometheus, Kibana}
+\item \normalsize \textbf{Deployment:} {Docker, Kubernetes, Jenkins}
+\item \normalsize \textbf{Messaging:} {Rabbit Mq, Kafka}
+\end{itemize}
+
+\divider
+
+
+\cvevent{Intern Software Engineer}{Viettel High Technology Industries Corporation}{June 2020 -- March 2021}{Ha Noi, Viet Nam}
+\large\href{https://www.tcbs.com.vn/isave}{\textbf{5gcore SMF Project}}
+
+\begin{itemize}
+\item \normalsize\textbf{Objectives:} {The user session management system in the 5GCore ecosystem}
+\item \normalsize Research on the cluster architectures of Aerospike, MongoDB, and Redis databases, and set up their clusters
+\item \normalsize Research on the architecture of Docker and Kubernetes, and set up a K8S cluster in an on-premises environment with HA proxy and load balancing
+\end{itemize}
+\vspace{0.3cm}
+
+
+
+% \divider
+
+% \cvevent{Product Engineer}{Google}{23 June 1999 -- 2001}{Palo Alto, CA}
+
+% \begin{itemize}
+% \item Joined the company as employe \#20 and female employee \#1
+% \item Developed targeted advertisement in order to use user's search queries and show them related ads
+% \end{itemize}
+
+
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the currentc column
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Education}
+
+\cvevent{Bachelor\ in Computer Science}{Hanoi University of Science and Technology}{Aug 2017 -- Mar 2022}{}
+\begin{itemize}
+\item \normalsize\textbf{CPA:} {3.04}
+\end{itemize}
+
+
+\large{\textbf{Graduation Project: \MYhref{https://github.com/dungbv99/mini-leetcode}{Leetcode Clone}}}
+
+\begin{itemize}
+\item \normalsize\textbf{Objectives:} {Develop a website similar to \MYhref{https://leetcode.com/problemset/all/} {Leetcode} that supports students in learning Data Structures and Algorithms and allows teachers to manage contests.}
+\item Develop a backend and frontend service that enables users to run their source code and allows for the management of contests
+\item \normalsize \textbf{Programing language:} {Java}  \quad \textbf{Framework:} {Spring Boot} 
+\item \normalsize \textbf{Database:} {Postgres}
+\end{itemize}
+
+
+\cvsection{English}
+
+\cvskill{Listening}{3.5} 
+
+\cvskill{Speaking}{2.5}
+% \divider
+
+\cvskill{Reading}{3}
+% \divider
+\cvskill{Writing}{3}
+\begin{itemize}
+\item \normalsize\textbf{TOEIC:} {650}
+\end{itemize}
+
+
+\cvsection{Technical Strengths}
+
+\normalsize\textbf{Programing Language}
+\vspace{0.1cm}
+
+\vspace{0.1cm}
+
+
+\cvskill{Java, C++}{4}
+\cvskill{Golang, Python}{3}
+\cvskill{Java Script, Html, Css}{2}
+\vspace{0.1cm}
+
+
+\normalsize\textbf{Database}
+\vspace{0.1cm}
+
+\cvskill{Oracle, Postgres, Redis}{4}
+\cvskill{MongoDB, Aerospike}{3}
+
+\vspace{0.1cm}
+
+\normalsize\textbf{Depoloyment, Monitoring}
+\vspace{0.1cm}
+
+\cvskill{Git}{4}
+\cvskill{Docker}{3}
+\cvskill{K8S, Jenkins}{2}
+\cvskill{Grafana, Prometheus}{3}
+\cvskill{Kibana}{3}
+
+\vspace{0.1cm}
+
+\normalsize\textbf{Messaging}
+
+\vspace{0.1cm}
+\cvskill{Kafka}{4}
+\cvskill{Rabbit Mq}{3}
+
+\vspace{0.1cm}
+\normalsize\textbf{Framework}
+
+
+\cvskill{Spring}{4}
+\cvskill{React Js}{2.5}
+
+
+
+
+\end{paracol}
+
+\end{document}
